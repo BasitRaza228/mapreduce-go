@@ -22,6 +22,7 @@ func GrepMapper(pattern string) types.MapFunc {
 	}
 }
 
+// reduce function for grep-like functionality
 func GrepReducer(key string, values []string) string {
 	if len(values) > 0 {
 		return values[0]
