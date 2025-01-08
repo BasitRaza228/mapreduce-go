@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-
 	// input files
 	inputFiles := []string{"input_one.txt", "input_two.txt", "input_three.txt"}
 
@@ -21,7 +20,7 @@ func main() {
 		log.Fatalf("MapReduce job failed: %v", err)
 	}
 
-	// results
+	// word count results
 	log.Println("\nWord Count Results:")
 	for i := 0; i < 3; i++ {
 		filename := fmt.Sprintf("mr-out-%d", i)
@@ -41,7 +40,7 @@ func main() {
 		log.Fatalf("Grep MapReduce job failed: %v", err)
 	}
 
-	// Display grep results
+	// grep search results
 	log.Println("\nGrep Results:")
 	for i := 0; i < 2; i++ {
 		filename := fmt.Sprintf("mr-out-%d", i)
@@ -63,6 +62,4 @@ func main() {
 	for _, file := range outputs {
 		os.Remove(file)
 	}
-
-	log.Println("\nMapReduce framework demonstration completed successfully!")
 }
