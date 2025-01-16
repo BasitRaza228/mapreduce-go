@@ -1,6 +1,5 @@
 package types
 
-// represents Map of MapReduce Framework
 type KeyValue struct {
 	Key   string `json:"key"`
 	Value string `json:"value"`

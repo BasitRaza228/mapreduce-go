@@ -2,7 +2,7 @@ package types
 
 import "time"
 
-// one unit of work
+// represents one unit of work
 type Task struct {
 	ID        int
 	Type      TaskType
